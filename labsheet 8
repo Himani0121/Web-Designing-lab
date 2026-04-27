@@ -1,0 +1,106 @@
+<!-- ===================== 1. ONLINE BOOK STORE ===================== -->
+<?php
+$books = [
+["name"=>"Book A","price"=>200],
+["name"=>"Book B","price"=>300],
+["name"=>"Book C","price"=>250]
+];
+
+$message="";
+if(isset($_POST['buy'])){
+$name=$_POST['book'];
+$message="You bought: ".$name;
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Store</title>
+<style>
+body{font-family:Arial;margin:0;}
+header{background:black;color:white;padding:15px;text-align:center;}
+.container{display:flex;flex-wrap:wrap;justify-content:center;}
+.card{
+border:1px solid #ccc;
+padding:20px;
+margin:15px;
+width:200px;
+text-align:center;
+box-shadow:0 0 10px #ccc;
+}
+button{padding:10px;background:green;color:white;border:none;}
+.msg{color:red;text-align:center;}
+nav{background:#333;padding:10px;}
+nav a{color:white;margin:10px;text-decoration:none;}
+</style>
+</head>
+
+<body>
+
+<header><h1>Online Book Store</h1></header>
+
+<nav>
+<a href="#store">Store</a>
+<a href="#client">Client Site</a>
+</nav>
+
+<p class="msg"><?php echo $message; ?></p>
+
+<div class="container" id="store">
+<?php foreach($books as $b){ ?>
+<div class="card">
+<h3><?php echo $b['name']; ?></h3>
+<p>Price: ₹<?php echo $b['price']; ?></p>
+
+<form method="post">
+<input type="hidden" name="book" value="<?php echo $b['name']; ?>">
+<button type="submit" name="buy">Buy Now</button>
+</form>
+
+</div>
+<?php } ?>
+</div>
+
+<hr>
+
+<!-- ===================== 2. RESPONSIVE CLIENT WEBSITE ===================== -->
+
+<section id="client" style="padding:20px;">
+<h2>Fictional Client Website</h2>
+
+<div style="display:flex;flex-wrap:wrap;">
+<div style="flex:1;padding:20px;background:lightblue;">
+<h3>About Client</h3>
+<p>This is a demo business website.</p>
+</div>
+
+<div style="flex:1;padding:20px;background:lightgreen;">
+<h3>Services</h3>
+<ul>
+<li>Web Design</li>
+<li>Development</li>
+<li>SEO</li>
+</ul>
+</div>
+</div>
+
+<br>
+
+<h3>Contact Form</h3>
+<form method="post">
+<input type="text" name="cname" placeholder="Name" required><br><br>
+<input type="email" name="cemail" placeholder="Email" required><br><br>
+<button type="submit" name="contact">Send</button>
+</form>
+
+<?php
+if(isset($_POST['contact'])){
+echo "<p style='color:blue;'>Thank you for contacting us!</p>";
+}
+?>
+
+</section>
+
+</body>
+</html>
