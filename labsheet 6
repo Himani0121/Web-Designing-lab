@@ -1,0 +1,196 @@
+
+<!-- ================== 1. Basic HTML Webpage ================== -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Page</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>This is a basic HTML page.</p>
+</body>
+</html>
+
+
+<!-- ================== 2. Heading, Paragraph & Formatting ================== -->
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Main Heading</h1>
+    <p>This is <b>bold</b>, <i>italic</i>, <u>underlined</u></p>
+</body>
+</html>
+
+
+<!-- ================== 3. Lists ================== -->
+<!DOCTYPE html>
+<html>
+<body>
+<ol>
+    <li>Apple</li>
+    <li>Banana</li>
+</ol>
+
+<ul>
+    <li>Car</li>
+    <li>Bike</li>
+</ul>
+</body>
+</html>
+
+
+<!-- ================== 4. Image ================== -->
+<!DOCTYPE html>
+<html>
+<body>
+<img src="image.jpg" width="300">
+</body>
+</html>
+
+
+<!-- ================== 5. Hyperlink ================== -->
+<!DOCTYPE html>
+<html>
+<body>
+<a href="https://www.google.com">Google</a>
+</body>
+</html>
+
+
+<!-- ================== 6. Table ================== -->
+<!DOCTYPE html>
+<html>
+<body>
+<table border="1">
+<tr><th>Name</th><th>Age</th></tr>
+<tr><td>John</td><td>20</td></tr>
+</table>
+</body>
+</html>
+
+
+<!-- ================== 7. Layout ================== -->
+<!DOCTYPE html>
+<html>
+<body>
+<header><h1>Website</h1></header>
+<section>Content</section>
+<footer>Footer</footer>
+</body>
+</html>
+
+
+<!-- ================== 8. Inline CSS ================== -->
+<p style="color:red;">Inline CSS</p>
+
+
+<!-- ================== 9. Internal CSS ================== -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p { color: blue; }
+</style>
+</head>
+<body>
+<p>Internal CSS</p>
+</body>
+</html>
+
+
+<!-- ================== 10. External CSS ================== -->
+<!-- HTML -->
+<link rel="stylesheet" href="style.css">
+<p>External CSS</p>
+
+<!-- CSS (style.css) -->
+p { color: green; }
+
+
+<!-- ================== 11. Colors, Fonts ================== -->
+<body style="background:lightgray;">
+<p style="color:blue;font-family:Arial;">Text</p>
+</body>
+
+
+<!-- ================== 12. Box Model ================== -->
+<style>
+div { border:2px solid black; padding:20px; margin:20px; }
+</style>
+<div>Box</div>
+
+
+<!-- ================== 13. Responsive ================== -->
+<div style="width:50%; margin:auto; background:lightblue;">
+Center
+</div>
+
+
+<!-- ================== 14. Navigation Menu ================== -->
+<style>
+ul { list-style:none; background:black; }
+li { display:inline; margin:10px; }
+a { color:white; }
+</style>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+</ul>
+
+
+<!-- ================== 15. JavaScript Alert ================== -->
+<script>
+alert("Hello");
+</script>
+
+
+<!-- ================== 16. Change Text ================== -->
+<p id="t">Old</p>
+<button onclick="f()">Click</button>
+<script>
+function f(){ document.getElementById("t").innerHTML="New"; }
+</script>
+
+
+<!-- ================== 17. Form Validation ================== -->
+<form onsubmit="return v()">
+<input type="text" id="n">
+<input type="submit">
+</form>
+<script>
+function v(){
+if(document.getElementById("n").value==""){
+alert("Required"); return false;
+}
+}
+</script>
+
+
+<!-- ================== 18. Change Background ================== -->
+<button onclick="c()">Color</button>
+<script>
+function c(){ document.body.style.background="yellow"; }
+</script>
+
+
+<!-- ================== 19. HTML + CSS + JS ================== -->
+<style>
+p{color:blue;}
+</style>
+<p id="d">Hello</p>
+<button onclick="chg()">Click</button>
+<script>
+function chg(){
+document.getElementById("d").innerHTML="Updated";
+}
+</script>
+
+
+<!-- ================== 20. Mini Project ================== -->
+<!-- index.html -->
+<h1>Home</h1>
+<a href="about.html">About</a>
+
+<!-- about.html -->
+<h1>About</h1>
+<a href="index.html">Home</a>
